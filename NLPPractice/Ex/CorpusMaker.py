@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 import codecs
 import pickle
 
@@ -20,5 +21,5 @@ def tokenize(doc):
 train_docs = [row[1] for row in corpus]
 sentences = [tokenize(d) for d in train_docs]
 
-with open("../data/corpus_training.pkl", "w", encoding="utf8") as f:
+with open("../data/corpus_train.pkl", "w") as f:
     pickle.dump(sentences, f)
