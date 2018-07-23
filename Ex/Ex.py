@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 import itertools
 
 from gensim.models.word2vec import Text8Corpus
