@@ -14,5 +14,3 @@ v_list = cv.fit_transform(corpus)
 
 lda = LatentDirichletAllocation(n_components=5, random_state=0)
 r = lda.fit_transform(v_list)
-
-print("a")
