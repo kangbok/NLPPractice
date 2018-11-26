@@ -21,5 +21,5 @@ def tokenize(doc):
 train_docs = [row[1] for row in corpus]
 sentences = [tokenize(d) for d in train_docs]
 
-with open("../data/corpus_train.pkl", "w") as f:
+with open("../data/corpus_train.pkl", "wb") as f:
     pickle.dump(sentences, f)
