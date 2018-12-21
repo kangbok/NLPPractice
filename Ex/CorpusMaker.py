@@ -20,6 +20,14 @@ def tokenize(doc):
 
 train_docs = [row[1] for row in corpus]
 sentences = [tokenize(d) for d in train_docs]
+new_sentences = []
+
+for l in sentences:
+    new_l = []
+    for w in l:
+        new_l.append(w.encode("utf-8", "ignore"))
+
+    new_sentences.append(new_l)
 
 with open("../data/corpus_train.pkl", "wb") as f:
-    pickle.dump(sentences, f)
+    pickle.dump(new_sentences, f)

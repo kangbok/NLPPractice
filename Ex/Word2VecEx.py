@@ -14,5 +14,5 @@ EPOCH = 50 # 학습 반복 수
 
 
 from gensim.models import Word2Vec
-model = Word2Vec(sentences, size=DIMENSION, window=WINDOW, sg=SG, min_count=MIN_COUNT, iter=EPOCH)
+model = Word2Vec(sentences, size=DIMENSION, window=WINDOW, sg=SG, min_count=MIN_COUNT, iter=EPOCH, workers=7)
 model.save("../model/wordvector_w2v.model")
